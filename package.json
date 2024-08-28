@@ -1,6 +1,6 @@
 {
   "name": "prebuild",
-  "version": "1.0.0",
+  "version": "1.0.7",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -20,6 +20,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/1204888712/cpp.git"
+    "url": "git@github.com:1204888712/cpp.git"
   }
 }
