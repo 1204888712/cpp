@@ -28,6 +28,6 @@ jobs:
         run: npm install
       - name: Build and Upload Prebuild
         run: |
-          npm run prebuild -- -t 16.0.0 --arch ${{ matrix.arch }} -u ${{ secrets.GITHUB_TOKEN }}
+          npm run prebuild --arch ${{ matrix.arch }} -u ${{ secrets.GITHUB_TOKEN }}
         env:
           PREBUILD_TOKEN: ${{ secrets.GITHUB_TOKEN }}
