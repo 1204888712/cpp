@@ -17,5 +17,9 @@
   "devDependencies": {
     "prebuild": "^13.0.1",
     "prebuild-install": "^7.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/1204888712/cpp.git"
   }
 }
