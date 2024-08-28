@@ -1,6 +1,6 @@
 {
-  "name": "@liguobiao/test-prebuild",
-  "version": "1.0.10",
+  "name": "@mtfe/test-node-npm",
+  "version": "1.0.30",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
