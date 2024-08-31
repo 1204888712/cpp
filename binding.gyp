@@ -2,7 +2,14 @@
   "targets": [
     {
       "target_name": "hello",
-      "sources": [ "hello.cc" ]
+      "sources": [ "hello.cc" ],
+      "libraries": [  
+        "-L.",   
+        "-lb"   
+      ],  
+      "include_dirs": [  
+        "."     
+      ], 
     }
   ],
   'variables' : {
