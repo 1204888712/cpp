@@ -1,5 +1,5 @@
 #include <node.h>
-
+#include "b.h"
 namespace demo
 {
 
@@ -18,6 +18,7 @@ namespace demo
         MaybeLocal<String> maybeStr = String::NewFromUtf8(isolate, "world", v8::NewStringType::kNormal);
         // 将MaybeLocal<String>转换为Local<String>
         Local<String> str;
+        logb();
         if (maybeStr.ToLocal(&str))
         {
             args.GetReturnValue().Set(str);
