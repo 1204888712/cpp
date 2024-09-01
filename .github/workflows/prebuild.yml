@@ -23,19 +23,20 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '16.20.2'
+          node-version: '18.20.4'
       - name: Install Dependencies
         run: npm install
-      - name: Install CMake and Build Tools
-        run: |
-          choco install cmake
-          choco install make
+      - name: Get CMake
+        uses: lukka/get-cmake@latest
+      - name: Install Make (Windows only)
+        if: runner.os == 'Windows'
+        run: choco install make
       - name: Build libb
         run: |
           cmake -S libb -B libb/build -DCMAKE_BUILD_TYPE=Release
           cmake --build libb/build --config Release
       - name: Build and Upload Prebuild
         run: |
-          npm run prebuild -- -t 16.20.2 --arch ${{ matrix.arch }} -u ${{ secrets.GITHUB_TOKEN }}
+          npm run prebuild -- -t 18.20.4 --arch ${{ matrix.arch }} -u ${{ secrets.GITHUB_TOKEN }}
         env:
           PREBUILD_TOKEN: ${{ secrets.GITHUB_TOKEN }}
