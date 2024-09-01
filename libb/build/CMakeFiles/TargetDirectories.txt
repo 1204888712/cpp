@@ -1,0 +1,3 @@
+/Users/liguobiao/Desktop/demo/cpp/libb/build/CMakeFiles/b.dir
+/Users/liguobiao/Desktop/demo/cpp/libb/build/CMakeFiles/edit_cache.dir
+/Users/liguobiao/Desktop/demo/cpp/libb/build/CMakeFiles/rebuild_cache.dir

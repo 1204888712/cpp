@@ -26,6 +26,14 @@ jobs:
           node-version: '16.20.2'
       - name: Install Dependencies
         run: npm install
+      - name: Install CMake and Build Tools
+        run: |
+          choco install cmake
+          choco install make
+      - name: Build libb
+        run: |
+          cmake -S libb -B libb/build -DCMAKE_BUILD_TYPE=Release
+          cmake --build libb/build --config Release
       - name: Build and Upload Prebuild
         run: |
           npm run prebuild -- -t 16.20.2 --arch ${{ matrix.arch }} -u ${{ secrets.GITHUB_TOKEN }}
